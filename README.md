@@ -104,4 +104,4 @@ I want to continue to develop in the forEach statement and also more with my Jav
 
 ## Acknowledgments
 
-I want to give credit to ![image](https://user-images.githubusercontent.com/64808015/113464540-54a91500-9425-11eb-82ec-c329686b992e.png) https://github.com/Ifycode for helping with the JavaScript, she was able to make things clear to me by explaining how it works without getting tired.
+I want to give credit to https://github.com/Ifycode for helping with the JavaScript, she was able to make things clear to me by explaining how it works without getting tired.
