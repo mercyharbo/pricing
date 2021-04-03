@@ -1,31 +1,38 @@
-/*let priceSwitch = document.querySelector(".slider");
-let buttonBg = document.querySelector(".bg-color");
+const monthly = [19.99, 24.99, 39.99];
 
+function forMonthly() {
+  const prices = document.querySelectorAll(".amount");
+  prices.forEach(function(price, index) {
+    price.innerHTML = monthly[index];
+  });
+}
 
+forMonthly(); //called it global here first so that monthly is displayed on load due to position of the switch
+
+let priceSwitch = document.querySelector(".slider");
 priceSwitch.addEventListener("click", pricingToggle);
 
-function pricingToggle() {
-    let newPrice1 = document.querySelector(".price-heading1").innerHTML = "&dollar; 199.99";
-    let newPrice2 = document.querySelector(".price-heading2").innerHTML = "&dollar; 249.99";
-    let newPrice3 = document.querySelector(".price-heading3").innerHTML = "&dollar; 399.99";
+const annually = [199.99, 249.99, 399.99];
+
+function forAnnually() {
+  const prices = document.querySelectorAll(".amount");
+  prices.forEach(function(price, index) {
+    price.innerHTML = annually[index];
+  });
 }
-*/
 
-let monthly = [19.99, 24.99, 39.99];
-let yearly = [199.99, 249.99, 399.99];
-let prices = document.querySelector(".dollar");
-let switchBtn = document.querySelector(".slider");
-let tempPrice;
+let toggle = 0;
 
-switchBtn.addEventListener("click", priceChange);
+function pricingToggle() {
+  toggle += 1; // so this literally add 0 to 1?
+  //console.log(toggle);
+  if (toggle === 0) {
+    forMonthly();
+  }
 
-function priceChange() {
-  for (i = 0; i < prices.length; i++) {
-    if (switchBtn === checked) {
-      tempPrice = yearly[i];
-    } else { 
-      tempPrice = monthly[i];
-    }
-    prices[i].innerHTML = tempPrice;
+  if (toggle === 1) {
+    toggle = 0
+    toggle -= 1;
+    forAnnually();
   }
 }
