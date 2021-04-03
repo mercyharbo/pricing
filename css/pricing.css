@@ -84,7 +84,7 @@ h2 {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 }
 
 input:focus + .slider {
@@ -179,14 +179,22 @@ button {
   color: white;
 }
 
-.price-heading1, 
-.price-heading2,
-.price-heading3 {
+.amount {
   font-size: 2.5rem;
 }
 
-.dollar {
-  font-size: 25px;
+.dollar-sign {
+  font-size: 20px;
+}
+
+.bg-color:hover {
+  color: white;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
 }
 
 .attribution {
@@ -198,4 +206,32 @@ button {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    width: 100vw;
+    padding: 5%;
+    height: 100%;
+  }
+
+  .pricing-grid {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  .price {
+    margin: 5% 0;
+  }
+
+  .bg-top {
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
+
+
 }
